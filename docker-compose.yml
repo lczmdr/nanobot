@@ -56,4 +56,4 @@ services:
 
   nanobot-whatsapp-bridge:
     <<: *common-config
-    command: [ "channels", "start", "whatsapp" ]
+    command: [ "channels", "login", "whatsapp" ]
