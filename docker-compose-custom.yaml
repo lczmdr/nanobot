@@ -3,7 +3,7 @@ x-common-config: &common-config
     context: .
     dockerfile: Dockerfile
   volumes:
-    - nanobot_home:/home/nanobot/.nanobot
+    - nanobot_home:/root/.nanobot
   cap_drop:
     - ALL
   cap_add:
