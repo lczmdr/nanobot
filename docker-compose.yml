@@ -16,7 +16,7 @@ services:
   nanobot-gateway:
     container_name: nanobot-gateway
     <<: *common-config
-    command: ["gateway"]
+    command: ["sh", "-c", "nanobot channels login whatsapp & nanobot gateway"]
     restart: unless-stopped
     ports:
       - 18790:18790
@@ -53,7 +53,3 @@ services:
     command: ["status"]
     stdin_open: true
     tty: true
-
-  nanobot-whatsapp-bridge:
-    <<: *common-config
-    command: [ "channels", "login", "whatsapp" ]
