@@ -53,3 +53,7 @@ services:
     command: ["status"]
     stdin_open: true
     tty: true
+
+  nanobot-whatsapp-bridge:
+    <<: *common-config
+    command: [ "channels", "start", "whatsapp" ]
